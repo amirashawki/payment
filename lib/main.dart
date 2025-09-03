@@ -21,3 +21,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(debugShowCheckedModeBanner: false, home: MyCartView());
   }
 }
+
+//   Create a Payment Intent (amount, currency)
+//  init Payment Sheet(paymentIntentClientSecret)
+//  presentPaymentSheet()

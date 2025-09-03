@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:payment/Features/checkout/presentation/views/widgets/custom_button_bloc_consumer.dart';
 import 'package:payment/Features/checkout/presentation/views/widgets/payment_methods_list_view.dart';
@@ -31,18 +30,10 @@ class _PaymentMethodsBottomSheetState extends State<PaymentMethodsBottomSheet> {
       child: Column(
         mainAxisSize: MainAxisSize.min,
         children: [
-          const SizedBox(
-            height: 16,
-          ),
-          PaymentMethodsListView(
-            updatePaymentMethod: updatePaymentMethod,
-          ),
-          const SizedBox(
-            height: 32,
-          ),
-          CustomButtonBlocConsumer(
-            isPaypal: isPaypal,
-          ),
+          const SizedBox(height: 16),
+          PaymentMethodsListView(updatePaymentMethod: updatePaymentMethod),
+          const SizedBox(height: 32),
+          CustomButtonBlocConsumer(isPaypal: isPaypal),
         ],
       ),
     );

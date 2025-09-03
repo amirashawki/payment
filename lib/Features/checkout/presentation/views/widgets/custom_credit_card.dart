@@ -1,9 +1,12 @@
-
 import 'package:flutter/material.dart';
 import 'package:flutter_credit_card/flutter_credit_card.dart';
+
 class CustomCreditCard extends StatefulWidget {
-  const CustomCreditCard(
-      {super.key, required this.formKey, required this.autovalidateMode});
+  const CustomCreditCard({
+    super.key,
+    required this.formKey,
+    required this.autovalidateMode,
+  });
 
   final GlobalKey<FormState> formKey;
   final AutovalidateMode autovalidateMode;
@@ -27,24 +30,25 @@ class _CustomCreditCardState extends State<CustomCreditCard> {
           cvvCode: cvvCode,
           showBackView: showBackView,
           isHolderNameVisible: true,
-         onCreditCardWidgetChange: (value){},
+          onCreditCardWidgetChange: (value) {},
         ),
         CreditCardForm(
-            isHolderNameVisible: true,
-            autovalidateMode: widget.autovalidateMode,
-            cardNumber: cardNumber,
-            expiryDate: expiryDate,
-            cardHolderName: cardHolderName,
-            cvvCode: cvvCode,
-            onCreditCardModelChange: (carditCardModel) {
-              cardHolderName = carditCardModel.cardHolderName;
-              expiryDate = carditCardModel.expiryDate;
-              cvvCode = carditCardModel.cvvCode;
-              cardNumber = carditCardModel.cardNumber;
-              showBackView = carditCardModel.isCvvFocused;
-              setState(() {});
-            },
-            formKey: widget.formKey),
+          isHolderNameVisible: true,
+          autovalidateMode: widget.autovalidateMode,
+          cardNumber: cardNumber,
+          expiryDate: expiryDate,
+          cardHolderName: cardHolderName,
+          cvvCode: cvvCode,
+          onCreditCardModelChange: (carditCardModel) {
+            cardHolderName = carditCardModel.cardHolderName;
+            expiryDate = carditCardModel.expiryDate;
+            cvvCode = carditCardModel.cvvCode;
+            cardNumber = carditCardModel.cardNumber;
+            showBackView = carditCardModel.isCvvFocused;
+            setState(() {});
+          },
+          formKey: widget.formKey,
+        ),
       ],
     );
   }
