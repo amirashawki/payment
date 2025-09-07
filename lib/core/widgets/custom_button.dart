@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:payment/core/utils/styles.dart';
-
 class CustomButton extends StatelessWidget {
   const CustomButton({
     super.key,
@@ -11,7 +9,6 @@ class CustomButton extends StatelessWidget {
   });
 
   final void Function()? onTap;
-
   final String text;
   final bool isLoading;
   @override

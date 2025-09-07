@@ -10,12 +10,12 @@ class CheckOutRepoImpl implements CheckOutRepo {
     PaymentIntentInputModel paymentIntentInputModel,
   ) async {
     try {
-  await StripeServices().makePayment(
-    paymentIntentInputModel: paymentIntentInputModel,
-  );
-  return  Right(null);
-}  catch (e) {
-  return Left(ServerFailure(e.toString()));
-}
+      await StripeServices().makePayment(
+        paymentIntentInputModel: paymentIntentInputModel,
+      );
+      return Right(null);
+    } catch (e) {
+      return Left(ServerFailure(e.toString()));
+    }
   }
 }

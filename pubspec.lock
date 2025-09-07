@@ -146,10 +146,10 @@ packages:
     dependency: "direct main"
     description:
       name: flutter_credit_card
-      sha256: e8f23b149895c761e3071b088681ee2b324dd1ff097bf48ad819b5f06f5057c5
+      sha256: a31154e62667e6e1f089ea357941e9285e4b42b9cb699392e55c978e19f864a0
       url: "https://pub.flutter-io.cn"
     source: hosted
-    version: "4.0.0"
+    version: "4.1.0"
   flutter_lints:
     dependency: "direct dev"
     description:

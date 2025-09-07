@@ -6,15 +6,16 @@ class ApiServices {
     required String url,
     required body,
     required token,
-   String ? contentType,
-
+    String? contentType,
   }) async {
-    var response = await dio.post(url, data: body,options: Options(
-      headers: {'Authorization' :'Bearer: $token'},
-      contentType: contentType,
-     
-    ));
-     return response;
+    var response = await dio.post(
+      url,
+      data: body,
+      options: Options(
+        headers: {'Authorization': 'Bearer $token'},
+        contentType: contentType,
+      ),
+    );
+    return response;
   }
- 
 }
