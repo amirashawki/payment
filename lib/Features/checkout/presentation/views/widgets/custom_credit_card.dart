@@ -23,7 +23,6 @@ class _CustomCreditCardState extends State<CustomCreditCard> {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        
         CreditCardWidget(
           cardNumber: cardNumber,
           expiryDate: expiryDate,
@@ -31,7 +30,7 @@ class _CustomCreditCardState extends State<CustomCreditCard> {
           cvvCode: cvvCode,
           showBackView: showBackView,
           isHolderNameVisible: true,
-           onCreditCardWidgetChangenn: null,
+          onCreditCardWidgetChangenn: null,
         ),
         CreditCardForm(
           isHolderNameVisible: true,
