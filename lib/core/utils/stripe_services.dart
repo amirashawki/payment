@@ -1,5 +1,6 @@
 import 'package:dio/dio.dart';
 import 'package:flutter_stripe/flutter_stripe.dart';
+import 'package:payment/Features/checkout/data/models/customer_model/customer_model.dart';
 import 'package:payment/Features/checkout/data/models/ephemeral_key_model/ephemeral_key_model.dart';
 import 'package:payment/Features/checkout/data/models/init_payment_sheet_input_model.dart';
 import 'package:payment/Features/checkout/data/models/payment_intent_input_model.dart';
@@ -77,5 +78,17 @@ class StripeServices {
     );
     var ephemeralKeyModel = EphemeralKeyModel.fromJson(response.data);
     return ephemeralKeyModel;
+  }
+
+  
+  Future<CustomerModel> creatCustomer({required String name}) async {
+    var response = await ApiServices().post(
+      url: 'https://api.stripe.com/v1/customers',
+    body: {'name':name},
+      contentType: Headers.formUrlEncodedContentType,
+      token: ApiKeys.secretKey,
+    );
+    var customertModel =CustomerModel.fromJson(response.data);
+    return customertModel;
   }
 }

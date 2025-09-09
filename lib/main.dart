@@ -25,7 +25,8 @@ class MyApp extends StatelessWidget {
     return MaterialApp(debugShowCheckedModeBanner: false, home: MyCartView());
   }
 }
+
 // PaymentIntentModel Create a PaymentIntent ( amount, currency, customerId)
-// Create  EphemeralKey (Stripe-Version,customerId)
+// Create  EphemeralKey (customerId)
 // initPaymentSheet (paymentIntentClientSecret,ephemeralKeySecret,customerId)
 // presentPaymentSheet ()

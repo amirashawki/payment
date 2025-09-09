@@ -13,7 +13,7 @@ class ApiServices {
       url,
       data: body,
       options: Options(
-        headers:headers ?? {'Authorization': 'Bearer $token'},
+        headers: headers ?? {'Authorization': 'Bearer $token'},
         contentType: contentType,
       ),
     );
