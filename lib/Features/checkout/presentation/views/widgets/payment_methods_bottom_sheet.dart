@@ -13,13 +13,12 @@ class PaymentMethodsBottomSheet extends StatefulWidget {
 class _PaymentMethodsBottomSheetState extends State<PaymentMethodsBottomSheet> {
   bool isPaypal = false;
 
-  updatePaymentMethod({required int index}) {
+ updatePaymentMethod({required int index}) {
     if (index == 0) {
       isPaypal = false;
     } else {
       isPaypal = true;
     }
-
     setState(() {});
   }
 
@@ -31,7 +30,7 @@ class _PaymentMethodsBottomSheetState extends State<PaymentMethodsBottomSheet> {
         mainAxisSize: MainAxisSize.min,
         children: [
           const SizedBox(height: 16),
-          PaymentMethodsListView(updatePaymentMethod: updatePaymentMethod),
+          PaymentMethodsListView(updatePaymentMethod:updatePaymentMethod,),
           const SizedBox(height: 32),
           CustomButtonBlocConsumer(isPaypal: isPaypal),
         ],
