@@ -60,6 +60,7 @@ class StripeServices {
     await initPaymentSheet(
       initPaymentSheetInputModel: initPaymentSheetInputModel,
     );
+
     await displayPaymentSheet();
   }
 
@@ -80,15 +81,14 @@ class StripeServices {
     return ephemeralKeyModel;
   }
 
-  
   Future<CustomerModel> creatCustomer({required String name}) async {
     var response = await ApiServices().post(
       url: 'https://api.stripe.com/v1/customers',
-    body: {'name':name},
+      body: {'name': name},
       contentType: Headers.formUrlEncodedContentType,
       token: ApiKeys.secretKey,
     );
-    var customertModel =CustomerModel.fromJson(response.data);
+    var customertModel = CustomerModel.fromJson(response.data);
     return customertModel;
   }
 }
